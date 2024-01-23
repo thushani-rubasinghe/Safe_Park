@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2955CE"
+        android:fillViewport="true"
+        tools:context=".ui.ui.VehicleOwnerHomeFragment">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/refreshLayoutVehicleOwner"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:flow_verticalAlign="top">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                <Button
+                        android:id="@+id/searchLocationBtn"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="#00FFFFFF"
+                        app:icon="@drawable/baseline_search_24"
+                        app:strokeColor="#FFFFFF"
+                        app:strokeWidth="2dp"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/locationTextField"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:autofillHints="Location..."
+                        android:inputType="textAutoCorrect"
+                        android:textColorHint="@color/white"
+                        app:boxStrokeColor="#00FFFFFF"
+                        app:hintTextColor="@color/white"
+                        tools:ignore="LabelFor,SpeakableTextPresentCheck">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:height="60dp"
+                            android:background="#2955CE"
+                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                            android:fontFamily="@font/poppins_medium"
+                            android:hint="Location..."
+                            android:textColor="#FFFFFF"
+                            android:textColorHint="#FFFFFF"
+                            android:textSize="18sp"
+                            tools:ignore="HardcodedText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <fragment
+                android:id="@+id/mapview"
+                class="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+        <TextView
+                    android:id="@+id/availableParkingSpotsTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="#0D3297"
+                    android:fontFamily="@font/poppins"
+                    android:gravity="center"
+                    android:text="You have 0 parking spots nearby"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                <Spinner
+                        android:id="@+id/vehicleTypeFilterSpinner"
+                        style="@style/Widget.AppCompat.DropDownItem.Spinner"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"
+                        android:textColor="#FFFFFF"
+                        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                <Button
+                        android:id="@+id/filterMapForVehicleTypeBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:text="Filter"
+                        android:textColor="#2955CE" />
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/distanceDurationTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:fontFamily="@font/poppins"
+                    android:gravity="center"
+                    android:text="Distance : 0 Duration : 0"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+        </LinearLayout>
+
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"-->
+<!--            android:id="@+id/fbtn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:clickable="true"-->
+<!--            android:src="@drawable/baseline_person_pin_24"-->
+<!--            app:backgroundTint="#2955CE"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/mapview"-->
+<!--            app:layout_constraintEnd_toEndOf="@id/mapview"-->
+<!--            app:layout_constraintHorizontal_bias="0.9"-->
+<!--            app:layout_constraintStart_toStartOf="@id/mapview"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/refreshLayoutVehicleOwner"-->
+<!--            app:layout_constraintVertical_bias="0.9"-->
+<!--            android:focusable="true" />-->
+
+
+</ScrollView>

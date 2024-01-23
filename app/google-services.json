@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "630481879985",
+    "project_id": "safepark-c3e3f",
+    "storage_bucket": "safepark-c3e3f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630481879985:android:867e4173d1bda9faaa3390",
+        "android_client_info": {
+          "package_name": "com.example.safepark"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630481879985-k6mb3nsamne7gina2q0n4oo15p9aanvr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmreUmIG9GBt5eoH4l02hX6tVUJbX6Ttg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630481879985-k6mb3nsamne7gina2q0n4oo15p9aanvr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
